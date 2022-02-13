@@ -37,6 +37,9 @@ body{
 }
 
 /* Header */
+.site-head{
+    border-bottom: 1px solid #ECECEC;
+}
 
 .logo{
     color: var(--blue-color);
@@ -88,7 +91,6 @@ body{
  .main-nav{
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ECECEC;
   }
 
   .section{
