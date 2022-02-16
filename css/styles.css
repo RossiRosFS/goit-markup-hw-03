@@ -19,6 +19,23 @@
     text-decoration: none;
     color: inherit;
  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 
 body{
     color: var(--main-text-color);
@@ -46,7 +63,10 @@ body{
     font-family: Raleway, sans-serif;
     font-size: 26px;
     line-height: 1.2;
-    }
+}
+.site-head .logo{
+    margin-right: 93px;
+}
 .logo-header{
     color: var(--second-text-color);
 }
@@ -62,7 +82,6 @@ body{
  }
 .site-nav{
     display: flex;
-    margin-left: 93px;
     color: var(--second-text-color);
  }
  .site-nav .link,
@@ -71,12 +90,9 @@ body{
     padding-top: 32px;
     padding-bottom: 32px;
  }
-.site-nav .item, 
-.cont-nav .item{
+.item-nav:not(:last-child), 
+.item-cont:not(:last-child){
     margin-right: 50px;
-}
-.site-nav .item:last-child{
-    margin-right: 0px;
 }
 .site-nav .link.current{
     color: var(--blue-color);
@@ -85,7 +101,7 @@ body{
     display: flex;
     margin-left: auto;
  }
- .cont-nav .item:first-child{
+ .item-cont:first-child{
     margin-right: 50px;
  }
  .main-nav{
