@@ -122,9 +122,7 @@ body{
     padding-bottom: 200px;
  }
 .hero-title{
-    margin-top: 0px;
     margin-bottom: 30px;
-
 
     color: var(--white-text-color);
     font-weight: 900;
@@ -156,21 +154,31 @@ body{
  .botton:focus{
     background-color: var(--more-blue-color);
  }
+
  /* Soft section */
  .list.soft{
     display: flex;
+    flex-wrap: wrap;
  }
  .soft .item{
+    width:270px;
     margin-right: 30px;
-    width: 270px;
  }
  .soft .item:last-child{
     margin-right: 0px;
+ }
+  .soft-title{
+    margin-bottom: 10px;
+    color: var(--second-text-color);
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
  }
 
  /* Doing */
 .doing{
     display: flex;
+    flex-wrap: wrap;
 }
 .doing .item{
     margin-right: 30px;
@@ -178,23 +186,11 @@ body{
 .doing .item:last-child{
     margin-right: 0px;
 }
-
-.doing-section{
+.doing.section{
     padding-top: 0px;
 }
- .soft-title{
-    margin-top: 0px;
-    margin-bottom: 10px;
-    color: var(--second-text-color);
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
- }
- .soft-text, .team-text{
-    margin: 0px;
- }
+
  .section-title{
-    margin-top: 0px;
     margin-bottom: 50px;
 
     color: var(--second-text-color);
@@ -214,7 +210,7 @@ body{
 .team .item:last-child{
     margin-right: 0px;
 }
- .team-section{
+ .team.section{
     background-color: #F5F4FA;
  }
  .team-name, .team-text{
@@ -224,13 +220,14 @@ body{
  }
  .team-name{
     margin-bottom: 10px;
-    margin-top: 30px;
     color: var(--second-text-color);
     font-weight: 500;
  }
- .team-text{
-    margin-bottom: 30px;
- }
+.item-text{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 /* Footer */
 .address-part{
     font-style: inherit;
@@ -253,11 +250,11 @@ body{
  .logo-footer{
     color: var(--white-text-color);
  }
- .location{
-    margin-top: 20px;
-    margin-bottom: 9px;
+
+ .foot-logo{
+    margin-bottom: 20px;
  }
- .mail{
+ .address .item:not(:last-child){
     margin-bottom: 9px;
  }
 
@@ -265,10 +262,10 @@ body{
 .main-filter{
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .main-filter .item{
     margin-right: 8px;
-    margin-bottom: 50px;  
 }
 .main-filter .item:last-child{
     margin-right: 0px;
@@ -299,6 +296,7 @@ body{
 .filters:focus, .filters.active-filters{
     color: var(--white-text-color);
     background-color: var(--blue-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .example-works{
@@ -306,7 +304,7 @@ body{
     flex-wrap: wrap;
 }
 .example-works .item{
-    width: calc(100%-60px)/3;
+    width: calc((100%-60px)/3);
     margin-right: 30px;
 }
 .example-works .item:nth-child(3n){
@@ -317,8 +315,6 @@ body{
 }
 
 .name-projects{
-    margin-top: 0px;
-    margin-bottom: 0px;
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 20px;
@@ -333,8 +329,6 @@ body{
 }
 
 .projects{
-    margin-top: 0px;
-    margin-bottom: 0px;
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 20px;
