@@ -11,8 +11,6 @@
 }
 
 .list{
-    padding: 0px;
-    margin: 0px;
     list-style: none;
 }
 .link{
@@ -43,6 +41,9 @@ body{
     letter-spacing: 0.03em;
     font-family: Roboto, sans-serif;
 }
+img{
+    display: block;
+}
 .conteiner{
     margin-left: auto;
     margin-right: auto;
@@ -57,6 +58,7 @@ body{
 }
 
 .logo{
+    display: block;
     color: var(--blue-color);
     font-family: Raleway, sans-serif;
     font-size: 26px;
@@ -98,6 +100,7 @@ body{
 .cont-nav{
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 .item-cont:first-child{
     margin-right: 50px;
@@ -106,10 +109,9 @@ body{
     display: flex;
     align-items: center;
 }
-
 .section{
-      padding-top: 94px;
-      padding-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* Hero */
@@ -154,16 +156,19 @@ body{
 }
 
  /* Soft section */
-.list.soft{
+.card-set{
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
+    margin-top: -30px;
 }
-.soft .item{
-    flex-basis: calc(100%/4 - 30px);
+.card-item{
     margin-left: 30px;
+    margin-top: 30px;
 }
-
+.soft-item{
+    flex-basis: calc(100% / 4 - 30px);
+}
 .soft-title{
     margin-bottom: 10px;
     color: var(--second-text-color);
@@ -173,18 +178,9 @@ body{
 }
 
  /* Doing */
-.doing{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-}
-.doing .item{
-    margin-left: 30px;
-}
 .doing.section{
     padding-top: 0px;
 }
-
  .section-title{
     margin-bottom: 50px;
 
@@ -193,22 +189,18 @@ body{
     line-height: 1.17;
     text-align: center;
  }
+ .doing-item{
+    flex-basis: calc(100% / 3 - 30px);
+ }
 
  /* Team */
- .team{
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
- }
-.team .item{
-    flex-basis: calc(100%/4 - 30px);
-    margin-left: 30px;
-    
-    background-color: var(--main-bg-color);
-}
- .team.section{
+.team.section{
     background-color: #F5F4FA;
  }
+.team-item{
+    flex-basis: calc(100% / 4 - 30px);
+    background-color: var(--main-bg-color);
+}
  .team-name, .team-text{
     font-size: 16px;
     line-height: 1.19;
@@ -219,7 +211,7 @@ body{
     color: var(--second-text-color);
     font-weight: 500;
  }
-.item-text{
+.team-box{
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -243,11 +235,11 @@ body{
     padding-bottom: 60px;
     background-color: var(--second-bg-color);
  }
- .logo-footer{
+ .part-logo{
     color: var(--white-text-color);
  }
 
- .foot-logo{
+ .logo-foot{
     margin-bottom: 20px;
  }
  .address .item:not(:last-child){
@@ -255,23 +247,25 @@ body{
  }
 
  /* Portfolio */
-.main-filter{
+ .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+.filters-list{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
-.main-filter .item{
+.filter-item:not(:last-child){
     margin-right: 8px;
 }
-.main-filter .item:last-child{
-    margin-right: 0px;
-}
-.portfolio{
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
-.filters{
+.botton-filter{
     display: inline-block;
     border-radius: 4px;
     padding: 6px 22px;
@@ -288,26 +282,18 @@ body{
     line-height: 1.62;
 }
 
-.filters:hover,
-.filters:focus, .filters.active-filters{
+.botton-filter:hover,
+.botton-filter:focus, .botton-filter.active-filter{
     color: var(--white-text-color);
     background-color: var(--blue-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.example-works{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
-}
-.example-works .item{
-    flex-basis: calc(100%/3 - 30px);
-    margin-top: 30px;
-    margin-left: 30px;
+.project-item{
+    flex-basis: calc(100% / 3 - 30px);
 }
 
-.project-text{
+.project-box{
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 20px;
@@ -318,7 +304,7 @@ body{
     border-bottom: 1px solid #ECECEC;   
 }
 
-.name-projects{
+.project-name{
     margin-bottom: 4px;
 
     color: var(--second-text-color);
@@ -327,15 +313,10 @@ body{
     letter-spacing: 0.06em;
 }
 
-.projects{
+.project-text{
     font-size: 16px;
     line-height: 1.9;
 }
-
-.inbox{
-    display: block;
-}
-
 
 
 
